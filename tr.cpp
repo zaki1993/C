@@ -24,6 +24,7 @@ int main(int argc, char** argv)
 		// read file content
 		fscanf(file_one, "%s", (char*) file_one_content);
 		fscanf(file_two, "%s", (char*) file_two_content);
+
 		printf("Executing: tr %s %s\n", file_one_content, file_two_content);
 		execlp("tr", "tr", file_one_content, file_two_content);
 	}
@@ -33,5 +34,7 @@ int main(int argc, char** argv)
 		printf("Executing: tr %s %s\n", argv[1], argv[2]);
 		execlp("tr", "tr", argv[1], argv[2]);
 	}
+	fclose(file_one);
+	fclose(file_two);
 	return 0;
 }

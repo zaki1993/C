@@ -26,7 +26,7 @@ int main(int argc, char** argv)
 			{
 				if(attribute)
 				{
-					int get_exec_code = execlp("wc", "wc", argv[1], argv[i]);
+					execlp("wc", "wc", argv[1], argv[i]);
 				}
 				else
 				{

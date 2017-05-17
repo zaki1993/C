@@ -1,0 +1,6 @@
+if [ -f $1 -a -f $2 ]
+then
+tr `cat $1` `cat $2`
+else
+tr $1 $2
+fi
